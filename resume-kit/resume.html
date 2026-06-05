@@ -16,8 +16,8 @@
 
         body {
             font-family: 'Inter', Arial, sans-serif;
-            font-size: 11pt;
-            line-height: 1.5;
+            font-size: 10pt;
+            line-height: 1.35;
             color: #1a1a1a;
             background: #fff;
         }
@@ -25,18 +25,18 @@
         .page {
             max-width: 780px;
             margin: 0 auto;
-            padding: 36px 44px;
+            padding: 24px 32px;
         }
 
         /* HEADER */
         .header {
-            margin-bottom: 18px;
+            margin-bottom: 10px;
             border-bottom: 2px solid #1a5fa8;
-            padding-bottom: 14px;
+            padding-bottom: 10px;
         }
 
         .header h1 {
-            font-size: 22pt;
+            font-size: 20pt;
             font-weight: 700;
             color: #1a3a5c;
             letter-spacing: 0.5px;
@@ -44,16 +44,16 @@
         }
 
         .header .tagline {
-            font-size: 11pt;
+            font-size: 10pt;
             color: #555;
-            margin-bottom: 8px;
+            margin-bottom: 6px;
         }
 
         .contact-row {
             display: flex;
             flex-wrap: wrap;
-            gap: 6px 20px;
-            font-size: 10pt;
+            gap: 4px 16px;
+            font-size: 9.5pt;
             color: #333;
         }
 
@@ -64,41 +64,29 @@
 
         /* SECTION */
         .section {
-            margin-bottom: 14px;
+            margin-bottom: 10px;
         }
 
         .section-title {
-            font-size: 11pt;
+            font-size: 10pt;
             font-weight: 700;
             text-transform: uppercase;
             letter-spacing: 0.8px;
             color: #1a3a5c;
             border-bottom: 1px solid #c0d4ea;
-            padding-bottom: 3px;
-            margin-bottom: 8px;
-        }
-
-        /* TWO-COL */
-        .two-col {
-            display: flex;
-            gap: 32px;
-            align-items: flex-start;
-            margin-bottom: 14px;
-        }
-
-        .two-col .col {
-            flex: 1;
+            padding-bottom: 2px;
+            margin-bottom: 6px;
         }
 
         /* SKILLS */
         .skills-grid {
             display: flex;
             flex-direction: column;
-            gap: 4px;
+            gap: 3px;
         }
 
         .skill-row {
-            font-size: 10.5pt;
+            font-size: 9.5pt;
         }
 
         .skill-label {
@@ -108,7 +96,7 @@
 
         /* EXPERIENCE */
         .exp-item {
-            margin-bottom: 11px;
+            margin-bottom: 8px;
         }
 
         .exp-header {
@@ -116,51 +104,51 @@
             justify-content: space-between;
             align-items: baseline;
             flex-wrap: wrap;
-            gap: 4px;
+            gap: 2px;
         }
 
         .exp-title {
             font-weight: 700;
-            font-size: 11pt;
+            font-size: 10pt;
             color: #1a1a1a;
         }
 
         .exp-date {
-            font-size: 10pt;
+            font-size: 9.5pt;
             color: #555;
             white-space: nowrap;
         }
 
         .exp-company {
-            font-size: 10.5pt;
+            font-size: 9.5pt;
             color: #1a5fa8;
             font-weight: 600;
-            margin-bottom: 4px;
+            margin-bottom: 3px;
         }
 
         ul {
-            padding-left: 18px;
+            padding-left: 16px;
             margin: 0;
         }
 
         ul li {
-            font-size: 10.5pt;
-            margin-bottom: 3px;
+            font-size: 9.5pt;
+            margin-bottom: 2px;
             color: #222;
         }
 
         /* PROJECTS */
         .project-item {
-            margin-bottom: 7px;
+            margin-bottom: 5px;
         }
 
         .project-name {
             font-weight: 700;
-            font-size: 10.5pt;
+            font-size: 9.5pt;
         }
 
         .project-desc {
-            font-size: 10.5pt;
+            font-size: 9.5pt;
             color: #333;
         }
 
@@ -171,7 +159,7 @@
             }
 
             .page {
-                padding: 18px 30px;
+                padding: 16px 28px;
                 max-width: 100%;
             }
 
@@ -180,7 +168,7 @@
             }
 
             @page {
-                margin: 0.4in 0.5in;
+                margin: 0.3in 0.4in;
                 size: A4;
             }
         }
@@ -203,39 +191,28 @@
             </div>
         </header>
 
-        <!-- SKILLS + PROBLEM SOLVING side by side -->
-        <div class="two-col">
-            <div class="col">
-                <section class="section" style="margin-bottom:0;">
-                    <div class="section-title">Technical Skills</div>
-                    <div class="skills-grid">
-                        <div class="skill-row"><span class="skill-label">Languages:</span> Python3, Go, TypeScript, C++,
-                            Bash</div>
-                        <div class="skill-row"><span class="skill-label">Backend:</span> Django, FastAPI, Gin, RabbitMQ,
-                            Redis</div>
-                        <div class="skill-row"><span class="skill-label">Database:</span> PostgreSQL</div>
-                        <div class="skill-row"><span class="skill-label">Frontend:</span> Next.js, Angular, TailwindCSS
-                        </div>
-                        <div class="skill-row"><span class="skill-label">Tools &amp; Platforms:</span> Docker, AWS, Git,
-                            gRPC, Kafka, REST API</div>
-                    </div>
-                </section>
+        <!-- TECHNICAL SKILLS -->
+        <section class="section">
+            <div class="section-title">Technical Skills</div>
+            <div class="skills-grid">
+                <div class="skill-row"><span class="skill-label">Languages:</span> Python3, Go, TypeScript, C++, Bash</div>
+                <div class="skill-row"><span class="skill-label">Backend:</span> Django, FastAPI, Gin, RabbitMQ, Redis</div>
+                <div class="skill-row"><span class="skill-label">Database:</span> PostgreSQL</div>
+                <div class="skill-row"><span class="skill-label">Frontend:</span> Next.js, Angular, TailwindCSS</div>
+                <div class="skill-row"><span class="skill-label">Tools &amp; Platforms:</span> Docker, AWS, Git, gRPC, Kafka, REST API</div>
             </div>
-            <div class="col">
-                <section class="section" style="margin-bottom:0;">
-                    <div class="section-title">Problem Solving</div>
-                    <ul>
-                        <li>HackerRank &mdash; Problem Solving: Gold, Python: Gold &mdash; <a
-                                href="http://hackerrank.com/ShomiKhan">hackerrank.com/ShomiKhan</a></li>
-                        <li>UVA Online Judge &mdash; 402 problems solved &mdash; <a
-                                href="https://uhunt.onlinejudge.org/id/135776">uhunt.onlinejudge.org/id/135776</a></li>
-                        <li>LeetCode &mdash; 81 problems solved &mdash; <a
-                                href="https://leetcode.com/u/nahK994/">leetcode.com/nahK994</a></li>
-                        <li>LightOJ &mdash; 129 problems solved &mdash; user id: 11127</li>
-                    </ul>
-                </section>
-            </div>
-        </div>
+        </section>
+
+        <!-- PROBLEM SOLVING -->
+        <section class="section">
+            <div class="section-title">Problem Solving</div>
+            <ul>
+                <li>HackerRank &mdash; Problem Solving: Gold, Python: Gold</li>
+                <li>UVA Online Judge &mdash; 402 problems solved</li>
+                <li>LeetCode &mdash; 81 problems solved</li>
+                <li>LightOJ &mdash; 129 problems solved</li>
+            </ul>
+        </section>
 
         <!-- EXPERIENCE -->
         <section class="section">
@@ -248,16 +225,9 @@
                 </div>
                 <div class="exp-company">Brain Station 23</div>
                 <ul>
-                    <li>Owned backend feature delivery lifecycle including requirement analysis, API design,
-                        architecture contribution, implementation, testing, and bug resolution.</li>
-                    <li>Proactively identified edge cases and translated product requirements into scalable backend
-                        solutions.</li>
-                    <li>Drove API contract discussions with frontend teams using product flows and Figma designs to
-                        align business and technical requirements.</li>
-                    <li>Contributed to architecture and database design decisions to ensure maintainability,
-                        scalability, and performance.</li>
-                    <li>Adopted AI-assisted engineering practices by preparing detailed technical prompts and validating
-                        implementation strategies using tools such as ChatGPT and Cursor.</li>
+                    <li>Owned backend feature delivery lifecycle: requirement analysis, API design, architecture, implementation, testing, and bug resolution.</li>
+                    <li>Drove API contract discussions with frontend teams using product flows and Figma designs to align business and technical requirements.</li>
+                    <li>Contributed to architecture and database design decisions to ensure maintainability, scalability, and performance.</li>
                 </ul>
             </div>
 
@@ -268,22 +238,8 @@
                 </div>
                 <div class="exp-company">GroupyFy Inc.</div>
                 <ul>
-                    <li>Developed and maintained RESTful APIs with Django.</li>
-                    <li>Improved API performance by implementing asynchronous tasks.</li>
-                    <li>Integrated secure and seamless payment workflows with Stripe.</li>
-                    <li>Collaborated with frontend developers to ensure seamless functionality.</li>
-                    <li>Deployed the application on AWS.</li>
-                </ul>
-            </div>
-
-            <div class="exp-item">
-                <div class="exp-header">
-                    <span class="exp-title">Python Developer</span>
-                    <span class="exp-date">February 2023 – May 2023</span>
-                </div>
-                <div class="exp-company">Hubar Tech Limited</div>
-                <ul>
-                    <li>Created RESTful APIs and Swagger API documentation.</li>
+                    <li>Developed and maintained RESTful APIs with Django; improved performance via asynchronous tasks.</li>
+                    <li>Integrated secure payment workflows with Stripe and deployed the application on AWS.</li>
                 </ul>
             </div>
 
@@ -294,10 +250,8 @@
                 </div>
                 <div class="exp-company">SELISE Digital Platforms</div>
                 <ul>
-                    <li>Developed enterprise frontend web applications with Angular.</li>
-                    <li>Trained and guided junior teammates.</li>
-                    <li>Migrated full project from Python 2 to Python 3.</li>
-                    <li>Developed and maintained RESTful APIs with Django.</li>
+                    <li>Developed enterprise frontend web applications with Angular and mentored junior teammates.</li>
+                    <li>Migrated full project from Python 2 to Python 3; developed and maintained RESTful APIs with Django.</li>
                 </ul>
             </div>
 
@@ -308,7 +262,7 @@
                 </div>
                 <div class="exp-company">Samsung R&amp;D Institute Bangladesh</div>
                 <ul>
-                    <li>Built basic Tizen applications.</li>
+                    <li>Developed Tizen applications.</li>
                 </ul>
             </div>
         </section>
@@ -320,59 +274,19 @@
             <div class="project-item">
                 <div class="project-name">TinyCache &mdash; Go</div>
                 <div class="project-desc">
-                    A lightweight, fast, in-progress Redis-like caching system focused on performance and simplicity.
-                    URL: <a
-                        href="https://pkg.go.dev/github.com/nahK994/tiny-cache">pkg.go.dev/github.com/nahK994/tiny-cache</a>
+                    A lightweight, fast, Redis-like in-memory caching system focused on performance and simplicity.
+                    URL: <a href="https://pkg.go.dev/github.com/nahK994/tiny-cache">pkg.go.dev/github.com/nahK994/tiny-cache</a>
                 </div>
             </div>
 
             <div class="project-item">
-                <div class="project-name">TinyLetters &mdash; Go | Gin | PostgreSQL | Docker | gRPC | REST API | Kafka
-                </div>
+                <div class="project-name">TinyLetters &mdash; Go | Gin | PostgreSQL | Docker | gRPC | REST API | Kafka</div>
                 <div class="project-desc">
                     A microservices-based newsletter platform inspired by Medium.
                     GitHub: <a href="https://github.com/shomi-khan/tiny-letters">github.com/shomi-khan/tiny-letters</a>
                 </div>
             </div>
         </section>
-
-        <!-- OPEN SOURCE + EDUCATION + REFERENCES -->
-        <div class="two-col">
-            <div class="col">
-                <section class="section">
-                    <div class="section-title">Open Source Contribution</div>
-                    <div class="project-item">
-                        <div class="project-name">pytube3</div>
-                        <div class="project-desc">
-                            Contributed a bug fix related to YouTube playlist object handling.<br>
-                            Merged PR: <a
-                                href="https://github.com/get-pytube/pytube3/pull/84">github.com/get-pytube/pytube3/pull/84</a>
-                        </div>
-                    </div>
-                </section>
-
-                <section class="section" style="margin-bottom:0;">
-                    <div class="section-title">Education</div>
-                    <div class="project-item">
-                        <div class="project-name">Shahjalal University of Science &amp; Technology</div>
-                        <div class="project-desc">BSc. in Electrical &amp; Electronic Engineering</div>
-                    </div>
-                </section>
-            </div>
-
-            <div class="col">
-                <section class="section" style="margin-bottom:0;">
-                    <div class="section-title">References</div>
-                    <div class="project-item">
-                        <div class="project-name">Khairul Haq</div>
-                        <div class="project-desc">
-                            Founder, GroupyFy Inc.<br>
-                            <a href="mailto:khaq@groupyfy.com">khaq@groupyfy.com</a>
-                        </div>
-                    </div>
-                </section>
-            </div>
-        </div>
 
     </div>
 </body>
