@@ -52,7 +52,6 @@
         .contact-row {
             display: flex;
             flex-wrap: wrap;
-            gap: 6px 20px;
             font-size: 10pt;
             color: #333;
         }
@@ -60,6 +59,10 @@
         .contact-row a {
             color: #1a5fa8;
             text-decoration: none;
+        }
+
+        .contact-row span:not(:first-child) {
+            margin-left: 8px;
         }
 
         /* SECTION */
@@ -76,18 +79,6 @@
             border-bottom: 1px solid #c0d4ea;
             padding-bottom: 3px;
             margin-bottom: 8px;
-        }
-
-        /* TWO-COL */
-        .two-col {
-            display: flex;
-            gap: 32px;
-            align-items: flex-start;
-            margin-bottom: 14px;
-        }
-
-        .two-col .col {
-            flex: 1;
         }
 
         /* SKILLS */
@@ -149,6 +140,11 @@
             color: #222;
         }
 
+        ul li a {
+            color: #1a5fa8;
+            text-decoration: none;
+        }
+
         /* PROJECTS */
         .project-item {
             margin-bottom: 7px;
@@ -162,6 +158,11 @@
         .project-desc {
             font-size: 10.5pt;
             color: #333;
+        }
+
+        .project-desc a {
+            color: #1a5fa8;
+            text-decoration: none;
         }
 
         /* PRINT */
@@ -212,21 +213,9 @@
                 <div class="skill-row"><span class="skill-label">Backend:</span> Django, FastAPI, Gin, RabbitMQ,
                     Redis</div>
                 <div class="skill-row"><span class="skill-label">Database:</span> PostgreSQL</div>
-                <div class="skill-row"><span class="skill-label">Frontend:</span> Next.js, Angular, TailwindCSS
-                </div>
+                <div class="skill-row"><span class="skill-label">Frontend:</span> Next.js, Angular, TailwindCSS</div>
+                <div class="skill-row"><span class="skill-label">Others:</span> Git, Docker, AWS, REST API, gRPC</div>
             </div>
-        </section>
-        <section class="section">
-            <div class="section-title">Problem Solving</div>
-            <ul>
-                <li>HackerRank &mdash; Problem Solving: Gold, Python: Gold &mdash; <a
-                        href="http://hackerrank.com/ShomiKhan">hackerrank.com/ShomiKhan</a></li>
-                <li>UVA Online Judge &mdash; 402 problems solved &mdash; <a
-                        href="https://uhunt.onlinejudge.org/id/135776">uhunt.onlinejudge.org/id/135776</a></li>
-                <li>LeetCode &mdash; 81 problems solved &mdash; <a
-                        href="https://leetcode.com/u/nahK994/">leetcode.com/nahK994</a></li>
-                <li>LightOJ &mdash; 129 problems solved &mdash; user id: 11127</li>
-            </ul>
         </section>
 
         <!-- EXPERIENCE -->
@@ -299,23 +288,35 @@
             <div class="project-item">
                 <div class="project-name">TinyCache &mdash; Go</div>
                 <div class="project-desc">
-                    A lightweight, fast, in-progress Redis-like caching system focused on performance and simplicity.
-                    URL: <a
-                        href="https://pkg.go.dev/github.com/nahK994/tiny-cache">pkg.go.dev/github.com/nahK994/tiny-cache</a>
+                    A lightweight, fast, in-progress Redis-like caching system focused on performance and simplicity.<br>
+                    URL: <a href="https://pkg.go.dev/github.com/nahK994/tiny-cache">pkg.go.dev/github.com/nahK994/tiny-cache</a>
                 </div>
             </div>
 
             <div class="project-item">
-                <div class="project-name">TinyLetters &mdash; Go | Gin | PostgreSQL | Docker | gRPC | REST API | Kafka
+                <div class="project-name">TinyLetters &mdash; Go | Gin | PostgreSQL | Docker | gRPC | REST API
                 </div>
                 <div class="project-desc">
-                    A microservices-based newsletter platform inspired by Medium.
+                    A microservices-based newsletter platform inspired by Medium.<br>
                     GitHub: <a href="https://github.com/shomi-khan/tiny-letters">github.com/shomi-khan/tiny-letters</a>
                 </div>
             </div>
         </section>
 
-        <!-- OPEN SOURCE + EDUCATION + REFERENCES -->
+        <section class="section">
+            <div class="section-title">Problem Solving</div>
+            <ul>
+                <li>HackerRank &mdash; Problem Solving: Gold, Python: Gold &mdash; <a
+                        href="http://hackerrank.com/ShomiKhan">hackerrank.com/ShomiKhan</a></li>
+                <li>UVA Online Judge &mdash; 402 problems solved &mdash; <a
+                        href="https://uhunt.onlinejudge.org/id/135776">uhunt.onlinejudge.org/id/135776</a></li>
+                <li>LeetCode &mdash; 81 problems solved &mdash; <a
+                        href="https://leetcode.com/u/nahK994/">leetcode.com/nahK994</a></li>
+                <li>LightOJ &mdash; 129 problems solved &mdash; user id: 11127</li>
+            </ul>
+        </section>
+
+        <!-- EDUCATION + REFERENCES -->
          <section class="section">
             <div class="section-title">Education</div>
             <div class="project-item">
