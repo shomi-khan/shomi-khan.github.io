@@ -1,31 +1,69 @@
-import Image from 'next/image';
-import { Profile } from '../../../content/types';
-import { Card } from '../ui/Card';
+"use client";
 
-export default function ContactMe({ profile, welcome, sectionId, baseCSS, bgColor }: { profile: Profile; welcome: string; sectionId: string, baseCSS: string, bgColor: string }) {
+import {
+    FaGithub,
+    FaLinkedin,
+    FaFacebookF,
+    FaWhatsapp,
+    FaEnvelope,
+} from "react-icons/fa";
+import { Profile } from "../../../content/types";
+import { cardClass, labelClass } from "./shared";
+
+export default function ContactMe({ profile }: { profile: Profile }) {
+    const socials = [
+        {
+            id: "github",
+            icon: <FaGithub />,
+            handle: "github.com/shomi-khan",
+            href: profile.github.url,
+        },
+        {
+            id: "linkedin",
+            icon: <FaLinkedin />,
+            handle: "linkedin.com/in/shomikhan",
+            href: profile.linkedin.url,
+        },
+        {
+            id: "gmail",
+            icon: <FaEnvelope />,
+            handle: profile.gmail.url,
+            href: `mailto:${profile.gmail.url}`,
+        },
+        {
+            id: "whatsapp",
+            icon: <FaWhatsapp />,
+            handle: profile.whatsapp.number,
+            href: `https://wa.me/${profile.whatsapp.number.replace(/\D/g, "")}`,
+        },
+        {
+            id: "facebook",
+            icon: <FaFacebookF />,
+            handle: "facebook.com/shomi.khan1",
+            href: profile.facebook.url,
+        },
+    ];
+
     return (
-        <section id={sectionId} className={`${baseCSS} ${bgColor}`}>
-            <Card>
-                <div className="py-8 px-2 sm:px-12 max-w-lg text-center">
-                    <p className="text-gray-800 text-lg">{welcome}</p>
-                    <div className="flex flex-col space-y-4">
-                        <div className="flex justify-center gap-5 mt-5">
-                            <a href={profile.linkedin.url} target="_blank">
-                                <Image src={profile.linkedin.logoUrl} alt="LinkedIn" width={100} height={100} className="w-16 h-16" />
-                            </a>
-                            <a href={profile.facebook.url} target="_blank">
-                                <Image src={profile.facebook.logoUrl} alt="Facebook" width={100} height={100} className="w-16 h-16" />
-                            </a>
-                            <a href={`mailto:${profile.gmail.url}`}>
-                                <Image src={profile.gmail.logoUrl} alt="Gmail" width={100} height={100} className="w-16 h-16" />
-                            </a>
-                            <a href={`https://wa.me/${profile.whatsapp.number}`} target="_blank">
-                                <Image src={profile.whatsapp.logoUrl} alt="WhatsApp" width={100} height={100} className="w-16 h-16" />
-                            </a>
-                        </div>
-                    </div>
-                </div>
-            </Card>
-        </section>
+        <div id="contact-me" className={`${cardClass} lg:col-span-5`}>
+            <div className={labelClass}>Contact &amp; Socials</div>
+            <ul className="mt-3 flex flex-col gap-0.5">
+                {socials.map((s) => (
+                    <li key={s.id}>
+                        <a
+                            href={s.href}
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            className="flex items-center gap-3 px-2 py-2 rounded-md font-sans text-sm text-zinc-700 dark:text-zinc-300 hover:bg-zinc-100 dark:hover:bg-zinc-800 transition"
+                        >
+                            <span className="text-base text-zinc-500 dark:text-zinc-400">
+                                {s.icon}
+                            </span>
+                            <span className="truncate">{s.handle}</span>
+                        </a>
+                    </li>
+                ))}
+            </ul>
+        </div>
     );
-};
+}

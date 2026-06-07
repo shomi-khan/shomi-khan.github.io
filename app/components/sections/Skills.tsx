@@ -1,26 +1,34 @@
-import { SkillCategory, SkillItem } from "../../../content/types";
-import Image from "next/image";
+import { SkillCategory } from "../../../content/types";
+import { cardClass, chipClass, labelClass } from "./shared";
 
-
-export default function Skills({ skill, sectionId, baseCSS, bgColor }: { skill: SkillCategory; sectionId: string, baseCSS: string, bgColor: string }) {
-    const skillList: SkillItem[] = [
-        ...skill.language.items,
-        ...skill.backend.items,
-        ...skill.frontend.items,
-        ...skill.devops.items,
-        ...skill.tools.items,
+export default function Skills({ skill }: { skill: SkillCategory }) {
+    const skillCategories = [
+        skill.language,
+        skill.backend,
+        skill.frontend,
+        skill.devops,
+        skill.tools,
     ];
 
     return (
-        <section id={sectionId} className={`${baseCSS} ${bgColor}`}>
-            <div className="flex flex-wrap gap-4 w-[500px] pb-48 md:pb-0">
-                {skillList.map((item) => (
-                    <div key={item.name} className="flex items-center shadow-md bg-white p-4 gap-2 rounded-2xl hover:scale-110 transition-transform duration-200 cursor-pointer">
-                        {item.logo && <Image src={item.logo} alt={item.name} width={20} height={20} className="w-6 h-6" />}
-                        <span key={item.name} className="text-gray-600 font-medium">{item.name}</span>
+        <div id="skills" className={`${cardClass} lg:col-span-5`}>
+            <div className={labelClass}>Skills</div>
+            <div className="mt-3 flex flex-col gap-3">
+                {skillCategories.map((cat) => (
+                    <div key={cat.label}>
+                        <div className="font-mono text-[10px] uppercase tracking-wider text-zinc-400 dark:text-zinc-500 mb-1.5">
+                            {cat.label}
+                        </div>
+                        <div className="flex flex-wrap gap-1.5">
+                            {cat.items.map((item) => (
+                                <span key={item.name} className={chipClass}>
+                                    {item.name}
+                                </span>
+                            ))}
+                        </div>
                     </div>
                 ))}
             </div>
-        </section>
+        </div>
     );
 }

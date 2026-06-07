@@ -4,7 +4,7 @@ const isDev = process.env.NODE_ENV === 'development';
 const imgPath = (folder: string, file: string) => `${isDev ? `/${folder}/` : `${folder}/`}${file}`;
 
 export const navItems: NavItem[] = [
-    { id: "", label: "Home", icon: "🏠" },
+    { id: "home", label: "Home", icon: "🏠" },
     { id: "skills", label: "Skills", icon: "🧩" },
     { id: "experiences", label: "Experiences", icon: "💡" },
     { id: "contact-me", label: "Contact", icon: "☎️" },
