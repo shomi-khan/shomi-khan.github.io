@@ -50,7 +50,7 @@ export default function ContactMe({ contact, welcome }: ContactProps) {
     ];
 
     return (
-        <div id="contact-me" className={`${cardClass} lg:col-span-5 lg:row-span-1 flex flex-col justify-between`}>
+        <div id="contact-me" className={`${cardClass} lg:col-span-4 lg:row-span-1 flex flex-col justify-between`}>
             <div className="pb-6">
                 <div className={labelClass}>Contact &amp; Socials</div>
                 <ul className="mt-3 flex flex-col gap-0.5">

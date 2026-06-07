@@ -14,7 +14,7 @@ export default function Experiences({
     return (
         <div
             id="experiences"
-            className={`${cardClass} md:col-span-2 lg:col-span-7`}
+            className={`${cardClass} md:col-span-2 lg:col-span-8`}
         >
             <div className={labelClass}>Experience</div>
             <ul className="mt-3 flex flex-col divide-y divide-zinc-200 dark:divide-zinc-800">
