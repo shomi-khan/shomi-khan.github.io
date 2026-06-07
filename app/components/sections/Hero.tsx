@@ -1,25 +1,14 @@
 "use client";
 
-import { FaGithub, FaRegCommentDots } from "react-icons/fa";
-import { HeroInfo, Profile, Welcome } from "../../../content/types";
+import { FaRegCommentDots } from "react-icons/fa";
+import { HeroInfo, Welcome } from "../../../content/types";
 import { cardClass } from "./shared";
 
-type HeroProps = {
-    hero: HeroInfo;
-    profile: Profile;
-};
-
-export default function Hero({ hero, profile }: HeroProps) {
+export default function Hero({ hero }: { hero: HeroInfo }) {
     return (
         <div
-            className={`${cardClass} md:col-span-2 lg:col-span-7 lg:row-span-2 flex flex-col`}
+            className={`${cardClass} md:col-span-2 lg:col-span-7 lg:row-span-1 flex flex-col`}
         >
-            {/* <div>
-                <span className="font-mono text-[11px] uppercase tracking-wider px-2.5 py-1 rounded-full bg-emerald-100 dark:bg-emerald-900/40 text-emerald-700 dark:text-emerald-300">
-                    available for work
-                </span>
-            </div> */}
-
             <h1 className="font-mono text-3xl md:text-4xl font-bold mt-4 text-zinc-900 dark:text-zinc-100">
                 <span
                     className="animate-wave inline-block origin-[70%_70%]"
@@ -27,7 +16,7 @@ export default function Hero({ hero, profile }: HeroProps) {
                 >
                     👋
                 </span>
-                <span className="mr-1" aria-hidden>
+                <span className="mr-4" aria-hidden>
                     🤓
                 </span>
                 {hero.title}
@@ -37,16 +26,7 @@ export default function Hero({ hero, profile }: HeroProps) {
                 {hero.subTitle1}
             </p>
 
-            <div className="flex flex-wrap gap-3 mt-5">
-                <a
-                    href={profile.github.url}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="font-mono text-sm px-4 py-2 rounded-lg bg-zinc-900 dark:bg-zinc-100 text-white dark:text-zinc-900 hover:opacity-90 transition flex items-center gap-2"
-                >
-                    <FaGithub />
-                    Github Profile
-                </a>
+            <div className="flex flex-wrap gap-3 mt-5 mb-5">
                 <a
                     href="ShomiKhan_Resume.pdf"
                     target="_blank"
