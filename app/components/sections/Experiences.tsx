@@ -53,15 +53,19 @@ export default function Experiences({
                                 </span>
                             </button>
                             <div
-                                className={`overflow-hidden transition-[max-height] duration-300 ease-in-out ${
-                                    isOpen ? "max-h-96" : "max-h-0"
+                                className={`grid transition-[grid-template-rows] duration-300 ease-in-out ${
+                                    isOpen
+                                        ? "grid-rows-[1fr]"
+                                        : "grid-rows-[0fr]"
                                 }`}
                             >
-                                <ul className="font-sans text-sm text-zinc-600 dark:text-zinc-400 pl-10 pr-2 pb-4 space-y-1 list-disc">
-                                    {exp.responsibilities.map((resp, i) => (
-                                        <li key={i}>{resp}</li>
-                                    ))}
-                                </ul>
+                                <div className="overflow-hidden">
+                                    <ul className="font-sans text-sm text-zinc-600 dark:text-zinc-400 pl-10 pr-2 pb-4 space-y-1 list-disc">
+                                        {exp.responsibilities.map((resp, i) => (
+                                            <li key={i}>{resp}</li>
+                                        ))}
+                                    </ul>
+                                </div>
                             </div>
                         </li>
                     );
