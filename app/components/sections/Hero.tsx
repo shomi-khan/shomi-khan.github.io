@@ -4,11 +4,15 @@ import { FaRegCommentDots } from "react-icons/fa";
 import { HeroInfo, Welcome } from "../../../content/types";
 import { cardClass } from "./shared";
 
-export default function Hero({ hero }: { hero: HeroInfo }) {
+export default function Hero({
+    hero,
+    className = "",
+}: {
+    hero: HeroInfo;
+    className?: string;
+}) {
     return (
-        <div
-            className={`${cardClass} md:col-span-2 lg:col-span-7 lg:row-span-1 flex flex-col`}
-        >
+        <div className={`${cardClass} flex flex-col ${className}`}>
             <h1 className="font-mono text-3xl md:text-4xl font-bold mt-4 text-zinc-900 dark:text-zinc-100">
                 <span
                     className="animate-wave inline-block origin-[70%_70%]"

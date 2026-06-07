@@ -1,7 +1,13 @@
 import { SkillCategory } from "../../../content/types";
 import { cardClass, chipClass, labelClass } from "./shared";
 
-export default function Skills({ skill }: { skill: SkillCategory }) {
+export default function Skills({
+    skill,
+    className = "",
+}: {
+    skill: SkillCategory;
+    className?: string;
+}) {
     const skillCategories = [
         skill.language,
         skill.backend,
@@ -11,7 +17,7 @@ export default function Skills({ skill }: { skill: SkillCategory }) {
     ];
 
     return (
-        <div id="skills" className={`${cardClass} lg:col-span-5`}>
+        <div id="skills" className={`${cardClass} ${className}`}>
             <div className={labelClass}>Skills</div>
             <div className="mt-3 flex flex-col gap-3">
                 {skillCategories.map((cat) => (

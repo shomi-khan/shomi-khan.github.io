@@ -12,10 +12,15 @@ import { cardClass, labelClass } from "./shared";
 
 type ContactProps = {
     contact: Profile;
-    welcome: Welcome
+    welcome: Welcome;
+    className?: string;
 };
 
-export default function ContactMe({ contact, welcome }: ContactProps) {
+export default function ContactMe({
+    contact,
+    welcome,
+    className = "",
+}: ContactProps) {
     const socials = [
         {
             id: "github",
@@ -50,7 +55,10 @@ export default function ContactMe({ contact, welcome }: ContactProps) {
     ];
 
     return (
-        <div id="contact-me" className={`${cardClass} lg:col-span-4 lg:row-span-1 flex flex-col justify-between`}>
+        <div
+            id="contact-me"
+            className={`${cardClass} flex flex-col justify-between ${className}`}
+        >
             <div className="pb-6">
                 <div className={labelClass}>Contact &amp; Socials</div>
                 <ul className="mt-3 flex flex-col gap-0.5">

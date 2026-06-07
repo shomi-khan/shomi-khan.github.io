@@ -6,16 +6,15 @@ import { cardClass, labelClass } from "./shared";
 
 export default function Experiences({
     experiences,
+    className = "",
 }: {
     experiences: Experience[];
+    className?: string;
 }) {
     const [openIndex, setOpenIndex] = useState<number | null>(0);
 
     return (
-        <div
-            id="experiences"
-            className={`${cardClass} md:col-span-2 lg:col-span-8`}
-        >
+        <div id="experiences" className={`${cardClass} ${className}`}>
             <div className={labelClass}>Experience</div>
             <ul className="mt-3 flex flex-col divide-y divide-zinc-200 dark:divide-zinc-800">
                 {experiences.map((exp, idx) => {
