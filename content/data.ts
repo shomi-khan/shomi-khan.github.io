@@ -117,7 +117,6 @@ export const experiences: Experience[] = [
             "Proactively identified edge cases and translated product requirements into scalable backend solutions.",
             "Drove API contract discussions with frontend teams using product flows and Figma designs to align business and technical requirements.",
             "Contributed to architecture and database design decisions to ensure maintainability, scalability, and performance.",
-            "Adopted AI-assisted engineering practices by preparing detailed technical prompts and validating implementation strategies using tools such as ChatGPT, Cursor etc."
         ],
         emoji: "💡"
     },

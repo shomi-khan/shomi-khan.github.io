@@ -56,7 +56,7 @@ export default function ContactMe({
             </div>
 
             <div className="pt-6 border-t border-zinc-200 dark:border-zinc-800">
-                <p className="font-sans italic text-sm md:text-base text-zinc-600 dark:text-zinc-300">
+                <p className="font-mono text-sm text-zinc-600 dark:text-zinc-300">
                     {welcome.text}
                 </p>
             </div>

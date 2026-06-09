@@ -35,7 +35,7 @@ export default function Experiences({
                                 <div className="flex-1 min-w-0">
                                     <div className="font-mono text-sm font-semibold text-zinc-900 dark:text-zinc-100 truncate">
                                         {exp.company}
-                                        <span className="font-normal text-zinc-500 dark:text-zinc-400">
+                                        <span className="font-mono text-zinc-500 dark:text-zinc-400">
                                             {" "}
                                             — {exp.role}
                                         </span>

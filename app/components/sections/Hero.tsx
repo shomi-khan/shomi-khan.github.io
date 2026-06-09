@@ -23,7 +23,7 @@ export default function Hero({
         <div className={`${cardClass} flex flex-col ${className}`}>
             <h1 className="font-mono text-3xl md:text-4xl font-bold mt-4 text-zinc-900 dark:text-zinc-100">
                 <span
-                    className="animate-wave inline-block origin-[70%_70%]"
+                    className="space-between animate-wave inline-block origin-[70%_70%] text-[1.5rem]"
                     aria-hidden
                 >
                     👋
@@ -62,24 +62,10 @@ export default function Hero({
             </div>
 
             <div className="mt-auto pt-6 border-t border-zinc-200 dark:border-zinc-800">
-                <p className="font-sans text-sm md:text-base text-zinc-600 dark:text-zinc-400 leading-relaxed">
+                <p className="font-mono text-sm text-zinc-600 dark:text-zinc-300">
                     {hero.subTitle2}
                 </p>
             </div>
-        </div>
-    );
-}
-
-export function WelcomeBanner({ welcome }: { welcome: Welcome }) {
-    return (
-        <div className="md:col-span-2 lg:col-span-12 rounded-xl p-5 md:p-6 bg-zinc-200/60 dark:bg-zinc-800/40 flex items-start gap-3">
-            <FaRegCommentDots
-                className="text-xl text-zinc-500 dark:text-zinc-400 flex-shrink-0 mt-0.5"
-                aria-hidden
-            />
-            <p className="font-sans italic text-sm md:text-base text-zinc-600 dark:text-zinc-300">
-                {welcome.text}
-            </p>
         </div>
     );
 }
