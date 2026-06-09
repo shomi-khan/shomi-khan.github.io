@@ -11,21 +11,19 @@ export interface HeroInfo {
     subTitle2: string;
 };
 
-// Social Profile Links
-export interface SocialProfile {
-    url: string;
-    logoUrl: string;
+// A social/contact link shown in the ContactMe section.
+export interface SocialLink {
+    id: string;
+    handle: string;
+    href: string;
 };
 
+// Developer / coding platform profile (e.g. GitHub, GitLab, StackOverflow).
 export interface Profile {
-    github: SocialProfile;
-    facebook: SocialProfile;
-    linkedin: SocialProfile;
-    gmail: SocialProfile;
-    whatsapp: {
-        number: string;
-        logoUrl: string;
-    };
+    id: string;
+    label: string;
+    url: string;
+    logoUrl: string;
 };
 
 // Skill Categories

@@ -1,4 +1,4 @@
-import { Experience, HeroInfo, NavItem, Profile, SkillCategory, Welcome } from "./types";
+import { Experience, HeroInfo, NavItem, Profile, SkillCategory, SocialLink, Welcome } from "./types";
 
 const isDev = process.env.NODE_ENV === 'development';
 const imgPath = (folder: string, file: string) => `${isDev ? `/${folder}/` : `${folder}/`}${file}`;
@@ -16,28 +16,40 @@ export const hero: HeroInfo = {
     subTitle2: "Apart from coding, I’m an anime fan ⛩️, former cyclist 🚴, and hobbyist photographer 📸.",
 }
 
-export const profile: Profile = {
-    github: {
+const whatsappNumber = "+8801676498001";
+const gmailAddress = "shomikhan043@gmail.com";
+
+export const socials: SocialLink[] = [
+    {
+        id: "linkedin",
+        handle: "linkedin.com/in/shomikhan",
+        href: "https://linkedin.com/in/shomikhan",
+    },
+    {
+        id: "gmail",
+        handle: gmailAddress,
+        href: `mailto:${gmailAddress}`,
+    },
+    {
+        id: "whatsapp",
+        handle: whatsappNumber,
+        href: `https://wa.me/${whatsappNumber.replace(/\D/g, "")}`,
+    },
+    {
+        id: "facebook",
+        handle: "facebook.com/shomi.khan1",
+        href: "https://www.facebook.com/shomi.khan1",
+    },
+];
+
+export const profiles: Profile[] = [
+    {
+        id: "github",
+        label: "Github Profile",
         url: "https://github.com/shomi-khan",
         logoUrl: imgPath("social", "github.png")
-    },
-    facebook: {
-        url: "https://www.facebook.com/shomi.khan1",
-        logoUrl: imgPath("social", "facebook.png")
-    },
-    linkedin: {
-        url: "https://linkedin.com/in/shomikhan",
-        logoUrl: imgPath("social", "linkedin.png")
-    },
-    gmail: {
-        url: "shomikhan043@gmail.com",
-        logoUrl: imgPath("social", "gmail.png")
-    },
-    whatsapp: {
-        number: "+8801676498001",
-        logoUrl: imgPath("social", "whatsapp.png")
     }
-};
+];
 
 export const skill: SkillCategory = {
     language: {

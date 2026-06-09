@@ -1,14 +1,22 @@
 "use client";
 
-import { FaRegCommentDots } from "react-icons/fa";
-import { HeroInfo, Welcome } from "../../../content/types";
+import { ReactNode } from "react";
+import { FaGithub, FaRegCommentDots } from "react-icons/fa";
+import { HeroInfo, Profile, Welcome } from "../../../content/types";
 import { cardClass } from "./shared";
+
+// Maps a profile id → icon. Add new entries when introducing more platforms.
+const profileIcons: Record<string, ReactNode> = {
+    github: <FaGithub />,
+};
 
 export default function Hero({
     hero,
+    profiles,
     className = "",
 }: {
     hero: HeroInfo;
+    profiles: Profile[];
     className?: string;
 }) {
     return (
@@ -31,6 +39,18 @@ export default function Hero({
             </p>
 
             <div className="flex flex-wrap gap-3 mt-5 mb-5">
+                {profiles.map((p) => (
+                    <a
+                        key={p.id}
+                        href={p.url}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="font-mono text-sm px-4 py-2 rounded-lg bg-zinc-900 dark:bg-zinc-100 text-white dark:text-zinc-900 hover:opacity-90 transition flex items-center gap-2"
+                    >
+                        {profileIcons[p.id]}
+                        {p.label}
+                    </a>
+                ))}
                 <a
                     href="ShomiKhan_Resume.pdf"
                     target="_blank"
