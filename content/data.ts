@@ -113,10 +113,11 @@ export const experiences: Experience[] = [
         role: "Software Engineer 2",
         period: "May 2025 - Present",
         responsibilities: [
-            "Owned backend feature delivery lifecycle, including requirement analysis, API design, architecture contribution, implementation, testing support, and bug resolution.",
-            "Proactively identified edge cases and translated product requirements into scalable backend solutions.",
-            "Drove API contract discussions with frontend teams using product flows and Figma designs to align business and technical requirements.",
-            "Contributed to architecture and database design decisions to ensure maintainability, scalability, and performance.",
+            "Led end-to-end feature delivery by coordinating across backend, frontend, and QA teams from business analysis through release.",
+            "Contributed to finalize architectural decisions and database schema before implementation.",
+            "Implemented REST APIs, background tasks, and scheduled jobs using AI-assisted development with structured prompt engineering.",
+            "Collaborated with QA on test planning and resolved bugs and feedback during testing.",
+            "Mentored junior developers through building product thinking alongside technical skills."
         ],
         emoji: "💡"
     },

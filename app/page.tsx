@@ -14,8 +14,8 @@ export default function Home() {
   const layout = {
     hero: "md:col-span-2 lg:col-span-7",
     skills: "md:col-span-1 lg:col-span-5",
-    experiences: "md:col-span-2 md:order-2 lg:col-span-8 lg:order-none",
-    contact: "md:col-span-1 md:order-1 lg:col-span-4 lg:order-none",
+    experiences: "md:col-span-2 md:order-2 lg:col-span-9 lg:order-none",
+    contact: "md:col-span-1 md:order-1 lg:col-span-3 lg:order-none",
   };
 
   return (
