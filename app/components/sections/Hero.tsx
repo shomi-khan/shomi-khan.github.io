@@ -1,8 +1,8 @@
 "use client";
 
 import { ReactNode } from "react";
-import { FaGithub, FaRegCommentDots } from "react-icons/fa";
-import { HeroInfo, Profile, Welcome } from "../../../content/types";
+import { FaGithub } from "react-icons/fa";
+import { HeroInfo, Profile } from "../../../content/types";
 import { cardClass } from "./shared";
 
 // Maps a profile id → icon. Add new entries when introducing more platforms.
