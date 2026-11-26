@@ -27,7 +27,9 @@ concurrency:
 jobs:
   # Build job
   build:
-    runs-on: ubuntu-latest
+    # wkhtmltopdf is no longer available in Ubuntu 26.04 repositories.
+    # Keep this job on Ubuntu 24.04 until PDF generation is migrated.
+    runs-on: ubuntu-24.04
     steps:
       - name: Checkout
         uses: actions/checkout@v4
