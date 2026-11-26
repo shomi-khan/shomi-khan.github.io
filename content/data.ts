@@ -1,7 +1,8 @@
 import { Experience, HeroInfo, NavItem, Profile, SkillCategory, SocialLink, Welcome } from "./types";
 
-const isDev = process.env.NODE_ENV === 'development';
-const imgPath = (folder: string, file: string) => `${isDev ? `/${folder}/` : `${folder}/`}${file}`;
+const isDev = process.env.NODE_ENV === "development";
+const imgPath = (folder: string, file: string) =>
+    `${isDev ? `/${folder}/` : `${folder}/`}${file}`;
 
 export const navItems: NavItem[] = [
     { id: "home", label: "Home", icon: "🏠" },
@@ -12,9 +13,9 @@ export const navItems: NavItem[] = [
 
 export const hero: HeroInfo = {
     title: "Hi, I’m Shomi Khan",
-    subTitle1: "Software Engineer (Go, Python)",
+    subTitle1: "Software Engineer | Backend Systems | Python & AI",
     subTitle2: "Apart from coding, I’m an anime fan ⛩️, former cyclist 🚴, and hobbyist photographer 📸.",
-}
+};
 
 const whatsappNumber = "+8801676498001";
 const gmailAddress = "shomikhan043@gmail.com";
@@ -47,8 +48,8 @@ export const profiles: Profile[] = [
         id: "github",
         label: "Github Profile",
         url: "https://github.com/shomi-khan",
-        logoUrl: imgPath("social", "github.png")
-    }
+        logoUrl: imgPath("social", "github.png"),
+    },
 ];
 
 export const skill: SkillCategory = {
@@ -56,116 +57,108 @@ export const skill: SkillCategory = {
         label: "Programming Languages",
         items: [
             { name: "Python", logo: imgPath("skill", "python.png") },
-            { name: "Golang", logo: imgPath("skill", "golang.png") },
+            { name: "Go", logo: imgPath("skill", "golang.png") },
             { name: "TypeScript", logo: imgPath("skill", "typescript.png") },
             { name: "C++", logo: imgPath("skill", "c++.png") },
-            { name: "Bash", logo: imgPath("skill", "bash.png") }
-        ]
+            { name: "Bash", logo: imgPath("skill", "bash.png") },
+        ],
     },
     backend: {
-        label: "Backend",
+        label: "Backend Technologies",
         items: [
             { name: "Django", logo: imgPath("skill", "django.png") },
             { name: "FastAPI", logo: imgPath("skill", "fastapi.png") },
             { name: "Gin", logo: imgPath("skill", "gin.png") },
-            { name: "PostgreSQL", logo: imgPath("skill", "postgresql.png") },
-            // { name: "REST APIs", logo: null },
-            // { name: "gRPC", logo: null },
+            { name: "REST APIs", logo: null },
+            { name: "gRPC", logo: null },
             { name: "RabbitMQ", logo: imgPath("skill", "rabbitmq.png") },
-            { name: "Redis", logo: imgPath("skill", "redis.png") }
-        ]
+            { name: "Redis", logo: imgPath("skill", "redis.png") },
+        ],
+    },
+    database: {
+        label: "Database & Data Management",
+        items: [
+            { name: "PostgreSQL", logo: imgPath("skill", "postgresql.png") },
+            { name: "Schema Design", logo: null },
+            { name: "Query Optimization", logo: null },
+        ],
+    },
+    backendConcepts: {
+        label: "Backend Engineering Concepts",
+        items: [
+            { name: "Concurrency Control", logo: null },
+            { name: "Idempotency", logo: null },
+            { name: "Data Integrity", logo: null },
+            { name: "Transaction Management", logo: null },
+            { name: "Asynchronous Task Processing", logo: null },
+            { name: "Scheduled Task Processing", logo: null },
+        ],
     },
     frontend: {
         label: "Frontend",
         items: [
             { name: "Next.js", logo: imgPath("skill", "nextjs.png") },
-            // { name: "Angular", logo: imgPath("skill", "angular.png") },
+            { name: "Angular", logo: imgPath("skill", "angular.png") },
             { name: "TailwindCSS", logo: imgPath("skill", "tailwind-css.png") },
-            { name: "HTML", logo: imgPath("skill", "html.png") }
-        ]
-    },
-    devops: {
-        label: "DevOps & Cloud",
-        items: [
-            { name: "Docker", logo: imgPath("skill", "docker.png") },
-            { name: "AWS", logo: imgPath("skill", "aws.png") },
-            // { name: "Nginx", logo: imgPath("skill", "nginx.png") }
-        ]
+        ],
     },
     tools: {
-        label: "Tools",
+        label: "Development Tools",
         items: [
             { name: "Git", logo: imgPath("skill", "git.png") },
-            { name: "VSCode", logo: imgPath("skill", "vscode.png") },
-            { name: "Postman", logo: imgPath("skill", "postman.png") },
-            { name: "Pycharm", logo: imgPath("skill", "pycharm.png") },
-            { name: "Ubuntu", logo: imgPath("skill", "ubuntu.png") },
-        ]
-    }
+            { name: "Docker", logo: imgPath("skill", "docker.png") },
+        ],
+    },
 };
-
-
-
 
 export const experiences: Experience[] = [
     {
         company: "Brain Station 23",
         role: "Software Engineer 2",
-        period: "May 2025 - Present",
+        period: "May 2025 – Present",
         responsibilities: [
-            "Led end-to-end feature delivery by coordinating across backend, frontend, and QA teams from business analysis through release.",
-            "Contributed to finalize architectural decisions and database schema before implementation.",
-            "Implemented REST APIs, background tasks, and scheduled jobs using AI-assisted development with structured prompt engineering.",
-            "Collaborated with QA on test planning and resolved bugs and feedback during testing.",
-            "Mentored junior developers through building product thinking alongside technical skills."
+            "Led end-to-end feature delivery by coordinating backend, frontend, and QA teams from business analysis through release, while mentoring junior developers in product thinking and technical practices.",
+            "Contributed to product and architectural decisions, including defining database schemas before implementation.",
+            "Applied an AI-driven development lifecycle (AIDLC), covering requirement analysis and edge-case identification, maintaining feature-specific business and technical context in a central context repository, and using that context to guide implementation.",
+            "Applied concurrency control and idempotency to prevent duplicate or conflicting database operations.",
+            "Managed database transactions to ensure atomicity and data integrity across related operations.",
         ],
-        emoji: "💡"
+        emoji: "💡",
     },
     {
         company: "GroupyFy Inc.",
         role: "Backend Software Engineer",
-        period: "Nov 2023 - Jan 2025",
+        period: "November 2023 – January 2025",
         responsibilities: [
-            "Developed and maintained RESTful APIs with Django",
-            "Improved API performance by implementing asynchronous tasks",
-            "Integrated secure and seamless payment workflows with Stripe",
-            "Collaborated with frontend dev to ensure seamless functionality",
-            "Deployed the application on AWS"
+            "Developed and maintained RESTful APIs with Django.",
+            "Improved API performance through asynchronous task processing and scheduled jobs.",
+            "Integrated secure and seamless payment workflows with Stripe.",
         ],
-        emoji: "✨"
-    },
-    {
-        company: "Hubar Tech Limited",
-        role: "Python Developer",
-        period: "Feb 2023 - May 2023",
-        responsibilities: [
-            "Created RESTful APIs",
-        ],
-        emoji: "🐾"
+        emoji: "✨",
     },
     {
         company: "SELISE Digital Platforms",
         role: "Jr. Software Engineer",
-        period: "Apr 2020 - Dec 2022",
+        period: "April 2020 – December 2022",
         responsibilities: [
-            "Developed Enterprise frontend web app with Angular",
-            "Trained and gave necessary guidelines to junior teammates",
-            "Migrated full project from Python2 to Python3",
-            "Developed and maintailed RESTful APIs with Django"
+            "Developed enterprise frontend web applications with Angular.",
+            "Trained and guided junior teammates.",
+            "Migrated full project from Python 2 to Python 3.",
+            "Developed and maintained RESTful APIs with Django.",
         ],
-        emoji: "🎨"
+        emoji: "🎨",
     },
     {
         company: "Samsung R&D Institute Bangladesh",
         role: "Intern",
-        period: "Aug 2018 - Jan 2019",
+        period: "August 2018 – January 2019",
         responsibilities: [
-            "Learnt and built basic Tizen application"
+            "Built Tizen applications.",
         ],
-        emoji: "🌱"
-    }
+        emoji: "🌱",
+    },
 ];
 
 export const welcome: Welcome = {
-    text: "I love to chat 🗨️ rather than talk. If you ping me with a 'hi', I'll be happy to chat with you more! 😊"
-}
+    text: "I love to chat 🗨️ rather than talk. If you ping me with a 'hi', I'll be happy to chat with you more! 😊",
+};

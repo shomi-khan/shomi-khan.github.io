@@ -3,7 +3,7 @@ import "./globals.css";
 
 export const metadata: Metadata = {
   title: "Shomi Khan",
-  description: "Software Engineer (Go, Python)",
+  description: "Software Engineer | Backend Systems | Python & AI",
   icons: {
     icon: "/programmer.png",
   },
