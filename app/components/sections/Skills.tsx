@@ -11,8 +11,9 @@ export default function Skills({
     const skillCategories = [
         skill.language,
         skill.backend,
+        skill.database,
+        skill.backendConcepts,
         skill.frontend,
-        skill.devops,
         skill.tools,
     ];
 
