@@ -34,7 +34,7 @@ export const socials: SocialLink[] = [
     {
         id: "whatsapp",
         handle: whatsappNumber,
-        href: `https://wa.me/${whatsappNumber.replace(/\\D/g, "")}`,
+        href: `https://wa.me/${whatsappNumber.replace(/\D/g, "")}`,
     },
     {
         id: "facebook",
